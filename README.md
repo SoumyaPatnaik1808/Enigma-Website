@@ -1,73 +1,53 @@
-# React + TypeScript + Vite
+🧠 Enigma Coding Club Website
+=============================
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official website for **Enigma**, the coding club. This platform serves as a central hub for showcasing events, managing inductions, and building a strong developer community.
 
-Currently, two official plugins are available:
+Overview
+--------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The Enigma website is designed to:
 
-## React Compiler
+*   Introduce the club and its vision
+    
+*   Showcase ongoing and past events
+    
+*   Manage induction processes
+    
+*   Provide resources for members
+    
+*   Create a strong digital presence for the club
+    
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Tech Stack
+----------
 
-## Expanding the ESLint configuration
+*   **Frontend:** React js
+    
+*   **Styling:** Tailwind CSS _(if applicable)_
+    
+*   **Animations :** GSAP , Framer-motion
+    
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Features
+--------
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+*   **Homepage** – Introduction and highlights
+    
+*   **Teams**– Briefly described the persons behind the commits
+    
+*   **Projects** – Described about the various Projects made here
+    
+*   **Induction Portal** – Registration and selection info
+    
+*   **Blogs** – Insights of the famous blogs of our club
+    
+*   **Responsive Design** – Works across devices
+    
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Note
+----
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+*   This project is part of the **Enigma Coding Club induction process**
+    
+*   The goal is to demonstrate development skills, structure, and creativity
