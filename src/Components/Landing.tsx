@@ -3,7 +3,7 @@ import '../index.css';
 
 
 
-import Navbar from "./Navbar";
+
 
 export default function EnigmaLanding() {
     const [typed, setTyped] = useState("");
@@ -33,7 +33,7 @@ export default function EnigmaLanding() {
 
 
 
-                <Navbar />
+
 
 
                 <main className="flex-1 flex flex-col items-center justify-center text-center px-6 pt-[60px] pb-[80px] relative z-[5]">

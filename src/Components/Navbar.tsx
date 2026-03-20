@@ -10,15 +10,15 @@ export default function Navbar() {
     useEffect(() => {
         let i = 0;
         setTypedLogo("");
-        const interval = setInterval(() => {
+        const interval = window.setInterval(() => {
             if (i < logoText.length) {
                 setTypedLogo(logoText.slice(0, i + 1));
                 i++;
             } else {
-                clearInterval(interval);
+                window.clearInterval(interval);
             }
         }, 150);
-        return () => clearInterval(interval);
+        return () => window.clearInterval(interval);
     }, []);
 
     return (
@@ -37,7 +37,7 @@ export default function Navbar() {
                     link === activeNav ? (
                         <button
                             key={link}
-                            className="nav-active font-mono text-[14px] font-bold border-none cursor-pointer"
+                            className="nav-active font-JetBrains Mono-[14px] font-bold border-none cursor-pointer"
                             onClick={() => setActiveNav(link)}
                         >
                             {link}
