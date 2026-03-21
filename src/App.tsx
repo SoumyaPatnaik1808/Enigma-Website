@@ -3,7 +3,7 @@ import Team from "./Components/Team";
 import Navbar from "./Components/Navbar";
 import Projects from "./Components/Projects";
 import Blogs from "./Components/Blogs";
-// import Contact from "./Components/Contact";
+import Contact from "./Components/Contact";
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
       </div>
       <div id="projects"><Projects /></div>
       <div id="blogs"><Blogs /></div>
-      {/* <div id="contact"><Contact /></div> */}
+      <div id="contact"><Contact /></div>
     </>
   )
 }
