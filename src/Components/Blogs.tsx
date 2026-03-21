@@ -1,9 +1,9 @@
 
 import { useEffect, useState } from 'react';
 import type { FC } from 'react';
-import ProjectCard from './Sub-components/ProjectCard';
-const Projects: FC = () => {
-    const text = "projects";
+import BlogCard from './Sub-components/BlogCard';
+const Blogs: FC = () => {
+    const text = "blogs";
     const [typed, setTyped] = useState("");
     useEffect(() => {
         let i = 0;
@@ -35,10 +35,36 @@ const Projects: FC = () => {
 
 
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-                    Explore Our <span className='text-green-400'> Projects </span>
+                    From our <span className='text-green-400'> Developers </span>
                 </h1>
                 <div className="flex justify-center w-full">
-                    <ProjectCard />
+                    <BlogCard
+                        title="Google Gemini"
+                        src="./blog-1.jpg"
+                        description=""
+                        link="https://enigma-dev-web.web.app/blogs/1"
+                    />
+                    <BlogCard
+                        className='m-2'
+                        title="Quantum Crypto"
+                        src="./blog-2.jpg"
+                        description=""
+                        link="https://enigma-dev-web.web.app/blogs/2"
+                    />
+                    <BlogCard
+                        className='m-2'
+                        title="Project IDX"
+                        src="./blog-3.jpg"
+                        description=""
+                        link="https://enigma-dev-web.web.app/blogs/3"
+                    />
+                    <BlogCard
+                        className='m-2'
+                        title="Bun.sh"
+                        src="./blog-4.jpg"
+                        description=""
+                        link="https://enigma-dev-web.web.app/blogs/4"
+                    />
                 </div>
 
             </div>
@@ -46,4 +72,4 @@ const Projects: FC = () => {
     );
 };
 
-export default Projects;
+export default Blogs;

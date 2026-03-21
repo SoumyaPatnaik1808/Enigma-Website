@@ -1,6 +1,13 @@
+
 import { useState, useEffect } from "react";
 
-const NAV_LINKS = ["Home", "Team", "Projects", "Blogs", "Contact"];
+const NAV_LINKS = [
+    { name: "Home", link: "#home" },
+    { name: "Team", link: "#team" },
+    { name: "Projects", link: "#projects" },
+    { name: "Blogs", link: "#blogs" },
+    { name: "Contact", link: "#contact" }
+];
 
 export default function Navbar() {
     const [activeNav, setActiveNav] = useState("Home");
@@ -22,7 +29,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className="flex justify-between items-center px-12 py-5 relative z-10">
+        <nav className="flex  justify-between items-center px-12 py-5 relative z-10">
             <div className="flex items-center gap-1.5 font-mono text-[18px] font-bold text-[#22c55e]">
                 <img src="Enigma_logo.png" alt="Enigma Logo" className="h-20 w-auto" />
                 <h2>
@@ -33,23 +40,25 @@ export default function Navbar() {
             </div>
 
             <div className="flex items-center gap-1">
-                {NAV_LINKS.map((link) =>
-                    link === activeNav ? (
-                        <button
-                            key={link}
+                {NAV_LINKS.map((navItem) =>
+                    activeNav === navItem.name ? (
+                        <a
+                            key={navItem.name}
+                            href={navItem.link}
                             className="nav-active font-JetBrains Mono-[14px] font-bold border-none cursor-pointer"
-                            onClick={() => setActiveNav(link)}
+                            onClick={() => setActiveNav(navItem.name)}
                         >
-                            {link}
-                        </button>
+                            {navItem.name}
+                        </a>
                     ) : (
-                        <button
-                            key={link}
+                        <a
+                            key={navItem.name}
+                            href={navItem.link}
                             className="nav-link"
-                            onClick={() => setActiveNav(link)}
+                            onClick={() => setActiveNav(navItem.name)}
                         >
-                            {link}
-                        </button>
+                            {navItem.name}
+                        </a>
                     )
                 )}
             </div>

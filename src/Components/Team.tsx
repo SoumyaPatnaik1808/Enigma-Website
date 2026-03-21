@@ -49,8 +49,6 @@ export default function TeamSection() {
                     </h1>
 
                 </div>
-
-
                 <TeamCard />
             </div>
         </section>
